@@ -14,7 +14,7 @@
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
-        <li><a href="#">Гостиницы</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -34,25 +34,31 @@
     <section class="connect">
       <h2 class="content-title">Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <form class="hotel-search" method="get" action="#">
-        <h3 class="search-title">Поиск гостиницы в Седоне</h3>
-        <p class="date-field">
-          <label>Дата заезда:
-            <input type="text" name="arrival-date" placeholder="24 апреля 2017">
-          </label>
-        </p>
-        <p class="date-field">
-          <label>Дата выезда:
-            <input type="text" name="departure-date" placeholder="4 июля 2017">
-          </label>
-        </p>
-        <p><label>
-            Взрослые:<input class="number-field" type="text" name="number" placeholder="2"></label>
-          <label>Дети:<input class="number-field" type="text" name="number" placeholder="0">
-          </label>
-        </p>
-        <input class="search-btn" type="submit" value="Найти">
-      </form>
+      <div class="hide-form">
+        <p class="search-title"><button class="title-btn" type="submit">Поиск гостиницы в Седоне</button></p>
+        <form class="hotel-search" method="get" action="#">
+
+          <p class="date-field">
+            <label class="hotel-search-item">Дата заезда:
+              <input type="text" name="arrival-date" placeholder="24 апреля 2017">
+            </label>
+          </p>
+          <p class="date-field">
+            <label class="hotel-search-item">Дата выезда:
+              <input type="text" name="departure-date" placeholder="4 июля 2017">
+            </label>
+          </p>
+          <div class="old-item">
+            <p class="old-field"><label class="hotel-search-item">
+                Взрослые:<span><button class="less-number" type="submit">-</button><input class="number-field" type="number" name="adult" placeholder="2"><button class="more-number" type="submit">+</button></span></label>
+              <label class="hotel-search-item">Дети:<span><button class="less-number" type="submit">-</button><input class="number-field" type="number" name="children" placeholder="0"><button class="more-number" type="submit">+</button></span>
+              </label>
+            </p>
+          </div>
+          <button class="search-btn" type="submit">Найти</button>
+
+        </form>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
