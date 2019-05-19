@@ -34,24 +34,47 @@
     <section class="connect">
       <h2 class="content-title">Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="search-title"><button class="title-btn" type="submit">Поиск гостиницы в Седоне</button></p>
       <div class="hide-form">
-        <p class="search-title"><button class="title-btn" type="submit">Поиск гостиницы в Седоне</button></p>
-        <form class="hotel-search" method="get" action="#">
 
-          <p class="date-field">
-            <label class="hotel-search-item">Дата заезда:
-              <input type="text" name="arrival-date" placeholder="24 апреля 2017">
-            </label>
-          </p>
-          <p class="date-field">
-            <label class="hotel-search-item">Дата выезда:
-              <input type="text" name="departure-date" placeholder="4 июля 2017">
-            </label>
-          </p>
+        <form class="hotel-search" method="get" action="#">
+          <div class="arrival-item">
+            <p class="date-field">
+              <label class="hotel-search-item">Дата заезда:
+                <span class="arrival-calendar">
+                  <input type="text" name="arrival-date" placeholder="24 апреля 2017">
+                  <button class="view-calendar" type="button">=</button>
+                </span>
+              </label>
+            </p>
+          </div>
+          <div class="arrival-item">
+            <p class="date-field">
+              <label class="hotel-search-item">Дата выезда:
+                <span class="arrival-calendar">
+                  <input type="text" name="departure-date" placeholder="4 июля 2017">
+                  <button class="view-calendar" type="button">=</button>
+                </span>
+              </label>
+            </p>
+          </div>
           <div class="old-item">
-            <p class="old-field"><label class="hotel-search-item">
-                Взрослые:<span><button class="less-number" type="submit">-</button><input class="number-field" type="number" name="adult" placeholder="2"><button class="more-number" type="submit">+</button></span></label>
-              <label class="hotel-search-item">Дети:<span><button class="less-number" type="submit">-</button><input class="number-field" type="number" name="children" placeholder="0"><button class="more-number" type="submit">+</button></span>
+            <p class="old-field">
+              <label class="hotel-search-item">
+                Взрослые:
+                <span>
+                  <button class="less-number" type="button">-</button>
+                  <input class="number-field" type="number" name="adult" placeholder="2">
+                  <button class="more-number" type="button">+</button>
+                </span>
+              </label>
+              <label class="hotel-search-item">
+                Дети:
+                <span>
+                  <button class="less-number" type="button">-</button>
+                  <input class="number-field" type="number" name="children" placeholder="0">
+                  <button class="more-number" type="button">+</button>
+                </span>
               </label>
             </p>
           </div>
