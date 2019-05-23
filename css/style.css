@@ -43,7 +43,12 @@ a {
   line-height: 36px;
   font-weight: 700;
 }
-
+.text-preview {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color:#333333;  
+}
 .title-btn {
   width: 568px;
   background-color: #766357;
