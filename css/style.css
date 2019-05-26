@@ -47,7 +47,7 @@ a {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
-  color:#333333;  
+  color:#333333;
 }
 .title-btn {
   width: 568px;
@@ -94,9 +94,11 @@ a {
 
 .canyon-img {
   background-color: #ffffff;
+  background-image-size: 1200px;
   background-image: url("../img/landscape-img/intro-welcome.svg"),
     url("../img/landscape-img/landscape-1.jpg");
   height: 780px;
+  background-repeat: no-repeat;
 }
 
 .date-field {
@@ -221,4 +223,121 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+}
+/*стили сетки*/
+body > *{
+  background: rgba(255,0,0,0.3);
+}
+body > *  > *{
+  background:rgba(255,255,0,0.3);
+}
+body > *  > * > *{,255,0,0.3);
+}
+html,
+body {
+  width: 1280px;
+  min-height: 2762px;
+  }
+  body {
+    background-color: #f2f2f2;
+    background-size: 1280px auto;
+  margin-left: 40px;
+  margin-right: 40px;
+  }
+.header-page {
+
+  width: 1200px;
+  background-color: #ffffff;
+}
+
+.main-menu {
+  background-color: transparent;
+
+}
+
+.main-menu {
+  display: flex;
+}
+
+.menu-wrapper {
+  display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction:column;
+}
+.main-logo {
+  /*display:block;*/
+  width: 140px;
+  height: 55px;
+margin: auto;
+}
+.site-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0;
+  padding:0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.canyon-img {
+  display:flex;
+  width:100%;
+  padding-left:0;
+
+}
+.catalog-list {
+
+  display: flex;
+  flex-direction: column;
+  margin-top:0;
+}
+.catalog-item {
+  display:flex;
+  margin-bottom: 65px;
+
+}
+.hotels-img {
+  margin-top: 30px;
+}
+.hotels-choice {
+  margin-left: 35px;
+
+}
+.rating {
+  margin-left: auto;
+}
+.page-footer {
+  width: 1200px;
+  height: 122px;
+  background-color: #ffffff;
+  display: flex;
+    justify-content: space-around;
+    margin-top:20px;
+}
+
+
+.mini-link {
+  width: 240px;
+  min-height: 122px;
+  margin-top: 0;
+  text-align: center;
+  margin-left: 73px;
+  margin-right: 88px;
+}
+  .social-networks {
+    display: flex;
+      justify-content: space-around;
+      width: 400px;
+      height: 122px;
+}
+.footer-copyright {
+  width: 240px;
+  height: 122px;
+    margin-top: 0;
+    margin-left: 73px;
+    margin-right: 88px;
 }
