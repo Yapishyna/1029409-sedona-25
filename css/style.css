@@ -33,14 +33,21 @@ a {
   color: #b2b2b2;
 }
 
-.site-navigation a:active {
-  color: #9b8d84;
+.active a {
+  color: #766357;
+  font-weight: bold;
+}
+
+.content {
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 
 .content-title {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  padding-bottom: 30px;
 }
 
 .content-title-interesting {
@@ -54,6 +61,7 @@ a {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+  margin: 0;
 }
 
 .title-btn {
@@ -88,6 +96,7 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  border:2px solid #81b3d2;
 }
 
 .search-btn:hover {
@@ -127,69 +136,109 @@ a {
 
 .reason-list {
   display: flex;
-  flex-wrap: wrap;
-  position: relative;
+flex-wrap: wrap;
 }
 
-.bonus-reason {
+.first-reason {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  position: absolute;
-  top:920px;
-  z-index: 100;
+  color: #ffffff;
+  min-height: 580px;
 }
+
+.reason-wrap {
+  width: 280px;
+  background-color: #81b3d2;
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 50px;
+
+}
+
+.reason-title {
+  margin: 0;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.reason-text {
+  margin: 0;
+}
+
+.number {
+  margin: 0;
+  margin-top: 25px;
+  padding-bottom: 25px;
+
+}
+.number::after,
+.number::before {
+  content: "-";
+}
+.bonus-reason {
+  min-height: 330px;
+  display: flex;
+  color: #000000;
+}
+
+.bonus-reason-title,
+.bonus-reason-text {
+  margin: 0;
+}
+
+
+
 
 .bonus-reason li {
   text-align: center;
   width: 400px;
   padding-top: 60px;
   padding-bottom: 90px;
+
 }
 
-.first-reason {
-  display: flex;
-  width: 100%;
-  color: #ffffff;
-}
+.bonus-reason-text {
+  padding-left: 60px;
+  padding-right: 60px;
 
-.reason-wrap {
-  width: 400px;
-  background-color: #81b3d2;
-  text-align: center;
-  padding-top: 50px;
 }
 
 .second-reason {
   display: flex;
   width: 100%;
   color: #ffffff;
-    margin-top:350px;
 }
 
-.second-reason-wrap {
-  width: 400px;
-  background-color: #81b3d2;
-  text-align: center;
-  padding-top: 50px;
 
-}
 
 .other-reason {
   width: 400px;
   background-color: #eeeeee;
-  min-height: 260px;
+  min-height: 255px;
   text-align: center;
-  padding-top: 50px;
 
 }
+.other-reason-wrap {
+  width: 280px;
+background-color:  #eeeeee;
+text-align: center;
+padding-top: 50px;
+padding-left: 60px;
+padding-right: 60px;
+padding-bottom: 50px;
+min-height: 155px;
+}
+
 
 .hotel-search-item {
   background-color: #ffffff;
 }
 
 .date-field {
-  padding-left: 65px;
-  padding-right: 65px;
+
   padding-bottom: 30px;
   padding-top: 30px;
   margin: 0;
@@ -446,11 +495,17 @@ body {
 }
 
 .interesting-preview {
-  padding-bottom: 140px;
-  position: relative;
+padding-top: 50px;
+position: relative;
+
+
   margin-top: 0;
 }
-
+.point-date {
+  margin:0;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
 .content-title {
   width: 450px;
   margin: 0 auto;
@@ -464,7 +519,9 @@ body {
 .hide-form {
   left: 312px;
   right: 312px;
-  position: absolute;
+position: absolute;
+z-index: 150;
+display: none;
 }
 
 .search-title {
@@ -476,20 +533,25 @@ body {
 
 .title-btn {
   width: 575px;
-  height: 90px;
+padding-top:30px;
+padding-bottom: 30px;
   text-transform: uppercase;
-  position: absolute;
-  top: -90px;
-  right: 0;
-}
 
+}
+.content-title-interesting {
+  margin:0;
+}
 .hotel-search {
   padding-bottom: 60px;
-  width: 575px;
+  padding-top: 55px;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: 455px;
   background-color: #ffffff;
-  z-index: 100;
+text-align:left;
   left: 312px;
-  display: none;
+
+
 }
 
 .old-field {
@@ -584,7 +646,7 @@ body {
   justify-content: center;
 }
 
-.hide-form:hover .hotel-search {
+.title-btn:focus .hide-form {
   display: block;
 }
 
@@ -594,8 +656,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
 
 .choice-condition {
   background-image: url("../img/landscape-img/landscape-4.jpg");
@@ -608,37 +668,156 @@ body {
   padding-top: 25px;
   height: 220px;
   display: flex;
-
 }
+
 .infrastructure {
   display: flex;
   flex-direction: column;
-padding-left:70px;
-width:195px;
+  padding-left: 70px;
+  width: 195px;
 }
+
 .infrastructure-title,
 .housing-title {
   margin: 0;
 }
+
 .housing {
   display: flex;
   flex-direction: column;
-padding-left:70px;
-width:195px;
+  padding-left: 70px;
+  width: 195px;
 }
-
-
-
 
 .infrastructure-title {
   margin-bottom: 30px;
 }
+
 .infrastructure-option li {
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
+
 .housing-title {
   margin-bottom: 30px;
 }
+
 .housing-option li {
-padding-bottom:30px;    
+  padding-bottom: 30px;
+}
+
+.filter-range {
+  width: 330px;
+  margin: 50px auto;
+  /* для демо */
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
 }
