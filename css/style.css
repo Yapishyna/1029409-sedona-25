@@ -95,8 +95,9 @@ a {
 .old-field {
   margin: 0;
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
+  font-weight: 700;
+  justify-content: space-between;
 }
 
 .old-item {
@@ -149,16 +150,16 @@ a {
 
 .canyon-img::after {
   content: " ";
-  background-image: url("../img/landscape-img/polygon.svg");
-  background-size: 60px;
+  background-image: url("../img/landscape-img/intro-mask.svg");
   width: 100%;
-  height: 60px;
+  height: 59px;
+  background-position: 50% 100%;
   background-repeat: no-repeat;
-  background-color: #263439;
+  background-size: cover;
   position: absolute;
   z-index: 500;
-  top: 448px;
-  fill: red;
+  bottom: -2px;
+  left: 0;
 }
 
 /*стили для причин*/
@@ -311,7 +312,6 @@ a {
 }
 
 .number-field {
-
   width: 38px;
   height: 36px;
   text-align: center;
@@ -320,18 +320,26 @@ a {
   line-height: 26px;
   border: 2px solid transparent;
   box-sizing: border-box;
+  font-weight: 700;
 }
-.number-field:focus{
+
+.number-field:focus {
   background-color: #ffffff;
-outline: none;
-border-color: #e5e5e5;
+  outline: none;
+  border-color: #e5e5e5;
 }
+
 .form-text {
   width: 112px;
 }
 
 .form-text-old {
   width: 112px;
+  margin-right: 25px;
+}
+
+.text-old-children {
+  width: 65px;
 }
 
 .view-calendar {
@@ -356,6 +364,7 @@ border-color: #e5e5e5;
   outline: none;
   fill: #98c1da;
 }
+
 .number-field::-webkit-input-placeholder {
   color: #000000;
   opacity: 1;
@@ -377,6 +386,18 @@ border-color: #e5e5e5;
   color: #000000;
   opacity: 1;
 }
+
+.less-number:focus,
+.more-number:focus {
+  outline: none;
+  color: #81b3d2;
+}
+
+.less-number:hover,
+.more-number:hover {
+  color: #000000;
+}
+
 .less-number,
 .more-number {
   color: #a9a9a9;
@@ -385,20 +406,7 @@ border-color: #e5e5e5;
   background-color: transparent;
   border: 0;
   padding: 0;
-}
-.less-number,
-.more-number:focus {
-  outline: none;
-  color:#81b3d2;
-}
-.less-number:hover,
-.more-number:hover {
-  color: #000000;
-}
-
-.less-number:active,
-.more-number:active {
-  color: #81b3d2;
+  font-weight: 700;
 }
 
 .social-networks {
@@ -419,6 +427,7 @@ border-color: #e5e5e5;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+  margin: 0;
 }
 
 .hotels-name a:hover {
@@ -437,12 +446,33 @@ border-color: #e5e5e5;
   text-transform: uppercase;
 }
 
-.hotels-stars {
+.stars-number {
   background-image: url("../img/icons/icon-star.svg");
   background-size: 20px 20px;
   width: 80px;
-  height: 20px;
   background-repeat: repeat-x;
+  max-width: 200px;
+
+
+  height: 20px;
+  margin: 0;
+  align-items: flex-start;
+
+}
+
+.two {
+  width: 60px;
+}
+
+.three {
+  width: 40px;
+}
+
+.hotels-stars {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: right;
 }
 
 .rating {
@@ -453,6 +483,9 @@ border-color: #e5e5e5;
   text-transform: uppercase;
   width: 110px;
   text-align: center;
+  margin: 0;
+  margin-top: 70px;
+  background-color: #f2f2f2;
 }
 
 .catalog-btn,
@@ -638,10 +671,11 @@ body {
 .number-group {
   width: 114px;
   text-align: center;
-  background-color: #f2f2f2;
   height: 40px;
   display: flex;
   align-items: center;
+  font-weight: 700;
+  background-color: #f2f2f2;
 }
 
 .map-img {
@@ -662,6 +696,11 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.hotels-img img {
+  height: 90px;
 }
 
 .hotels-img {
@@ -669,26 +708,6 @@ body {
   width: 135px;
   margin-right: 30px;
   height: 126px;
-}
-
-.hotels-choice {
-  width: 650px;
-}
-
-.hotels-name {
-  margin: 0;
-}
-
-.hotels-stars {
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 auto;
-}
-
-.rating {
-  margin: auto 0 0 0;
-  background-color: #f2f2f2;
 }
 
 .page-footer {
@@ -719,7 +738,7 @@ body {
 
 .footer-copyright {
   width: 400px;
-  margin: 0 0 0 7px;
+  margin: 0;
   text-align: center;
   display: flex;
   align-items: center;
@@ -734,7 +753,6 @@ body {
 .housing-option {
   list-style: none;
   margin: 0;
-  padding: 0;
 }
 
 .choice-condition {
@@ -908,4 +926,8 @@ body {
   min-height: 255px;
   text-align: center;
   box-sizing: border-box;
+}
+
+.hotels-choice {
+  width: 780px;
 }
