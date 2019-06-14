@@ -140,11 +140,12 @@ a {
 .canyon-img {
   background-color: #263439;
   width: 100%;
+    height: 508px;
   background-image: url("../img/landscape-img/intro-welcome.svg"),
     url("../img/landscape-img/landscape-1.jpg");
   background-repeat: no-repeat;
-  background-size: 460px 350px, cover;
-  background-position: 50% 50%;
+  background-size: 460px 350px,1200px 773px;
+  background-position: 50% 50%,50% -50px;
   position: relative;
 }
 
@@ -387,16 +388,9 @@ a {
   opacity: 1;
 }
 
-.less-number:focus,
-.more-number:focus {
-  outline: none;
-  color: #81b3d2;
-}
 
-.less-number:hover,
-.more-number:hover {
-  color: #000000;
-}
+
+
 
 .less-number,
 .more-number {
@@ -408,7 +402,15 @@ a {
   padding: 0;
   font-weight: 700;
 }
-
+.less-number:hover,
+.more-number:hover {
+  color: #000000;
+}
+.less-number:focus,
+.more-number:focus {
+  outline: none;
+  color: #81b3d2;
+}
 .social-networks {
   list-style: none;
 }
@@ -449,15 +451,12 @@ a {
 .stars-number {
   background-image: url("../img/icons/icon-star.svg");
   background-size: 20px 20px;
-  width: 80px;
-  background-repeat: repeat-x;
+  width: 90px;
+  background-repeat: space;
   max-width: 200px;
-
-
   height: 20px;
   margin: 0;
   align-items: flex-start;
-
 }
 
 .two {
@@ -622,9 +621,7 @@ body {
   text-align: right;
 }
 
-.canyon-img {
-  height: 508px;
-}
+
 
 .content {
   text-align: center;
@@ -681,7 +678,8 @@ body {
 .map-img {
   background: url("../img/map/map.jpg")no-repeat;
   width: 100%;
-  height: 470px;
+  height: 593px;
+  margin-bottom: -122px;
 }
 
 .catalog-list {
@@ -753,6 +751,15 @@ body {
 .housing-option {
   list-style: none;
   margin: 0;
+  padding: 0;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+.infrastructure-option input {
+  display: none;
 }
 
 .choice-condition {
@@ -764,51 +771,67 @@ body {
   line-height: 21px;
   color: #ffffff;
   padding-top: 25px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right:70px;
   height: 220px;
   display: flex;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .infrastructure {
   display: flex;
-  flex-direction: column;
-  padding-left: 70px;
-  width: 195px;
+flex-direction: column;
+align-content: space-around;
+
+  width: 240px;
+
+
+
 }
+
 
 .infrastructure-title,
 .housing-title {
   margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .housing {
-  display: flex;
-  flex-direction: column;
-  padding-left: 70px;
-  width: 195px;
+
+
+  width: 240px;
+}
+.housing-option input {
+  display: none;
+
 }
 
-.infrastructure-title {
-  margin-bottom: 30px;
-}
 
-.infrastructure-option li {
-  padding-bottom: 30px;
-}
-
-.housing-title {
-  margin-bottom: 30px;
-}
-
+.infrastructure-option li,
 .housing-option li {
-  padding-bottom: 30px;
+margin-top: 10px;
 }
+
+
+
+
 
 .filter-range {
   width: 330px;
-  margin: 50px auto;
+
   /* для демо */
   color: #ffffff;
   text-transform: uppercase;
+  position: absolute;
+  z-index:500;
+  right: 70px;
+  top: 30px;
+
 }
 
 .filter-range-title {
@@ -930,4 +953,71 @@ body {
 
 .hotels-choice {
   width: 780px;
+}
+.filter-sorting {
+  display: flex;
+  min-height: 86px;
+  padding: 30px 72px;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.sorting-list,
+.sorting-btn {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.find-number{
+  width: 135px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.sorting-title {
+  margin: 0;
+  width: 104px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.sorting-of-type {
+  display: flex;
+}
+.sorting-list {
+display: flex;
+}
+.sorting-list li {
+  margin-left: 30px;
+}
+.sorting-for-number {
+  flex-grow: 1;
+
+}
+.sorting-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.sorting-btn li {
+  margin-left: 10px;
+}
+.sorting-list a {
+  border-bottom:1px dashed #81b3d2;
+  color: rgba(0,0,0,0.3);
+}
+.sorting-list .price {
+    color: #81b3d2;
+    border: 0;
+}
+ .more svg {
+    color: #81b3d2;
+}
+.for-type:hover,
+.for-rating:hover {
+  color: #81b3d2;
+}
+.for-type:focus,
+.for-rating:focus {
+  border: 0;
+  color: #000000; 
 }
