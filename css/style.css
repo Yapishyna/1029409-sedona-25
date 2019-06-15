@@ -140,12 +140,12 @@ a {
 .canyon-img {
   background-color: #263439;
   width: 100%;
-    height: 508px;
+  height: 508px;
   background-image: url("../img/landscape-img/intro-welcome.svg"),
     url("../img/landscape-img/landscape-1.jpg");
   background-repeat: no-repeat;
-  background-size: 460px 350px,1200px 773px;
-  background-position: 50% 50%,50% -50px;
+  background-size: 460px 350px, 1200px 773px;
+  background-position: 50% 50%, 50% -50px;
   position: relative;
 }
 
@@ -388,10 +388,6 @@ a {
   opacity: 1;
 }
 
-
-
-
-
 .less-number,
 .more-number {
   color: #a9a9a9;
@@ -402,15 +398,18 @@ a {
   padding: 0;
   font-weight: 700;
 }
+
 .less-number:hover,
 .more-number:hover {
   color: #000000;
 }
+
 .less-number:focus,
 .more-number:focus {
   outline: none;
   color: #81b3d2;
 }
+
 .social-networks {
   list-style: none;
 }
@@ -621,8 +620,6 @@ body {
   text-align: right;
 }
 
-
-
 .content {
   text-align: center;
 }
@@ -752,12 +749,12 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-    text-align: left;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
+
 .infrastructure-option input {
   display: none;
 }
@@ -773,7 +770,7 @@ body {
   padding-top: 25px;
   padding-bottom: 30px;
   padding-left: 70px;
-  padding-right:70px;
+  padding-right: 70px;
   height: 220px;
   display: flex;
   box-sizing: border-box;
@@ -782,15 +779,10 @@ body {
 
 .infrastructure {
   display: flex;
-flex-direction: column;
-align-content: space-around;
-
+  flex-direction: column;
+  align-content: space-around;
   width: 240px;
-
-
-
 }
-
 
 .infrastructure-title,
 .housing-title {
@@ -802,36 +794,27 @@ align-content: space-around;
 }
 
 .housing {
-
-
   width: 240px;
 }
+
 .housing-option input {
   display: none;
-
 }
-
 
 .infrastructure-option li,
 .housing-option li {
-margin-top: 10px;
+  margin-top: 10px;
 }
-
-
-
-
 
 .filter-range {
   width: 330px;
-
   /* для демо */
   color: #ffffff;
   text-transform: uppercase;
   position: absolute;
-  z-index:500;
+  z-index: 500;
   right: 70px;
   top: 30px;
-
 }
 
 .filter-range-title {
@@ -954,6 +937,7 @@ margin-top: 10px;
 .hotels-choice {
   width: 780px;
 }
+
 .filter-sorting {
   display: flex;
   min-height: 86px;
@@ -968,12 +952,14 @@ margin-top: 10px;
   margin: 0;
   padding: 0;
 }
-.find-number{
+
+.find-number {
   width: 135px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
 }
+
 .sorting-title {
   margin: 0;
   width: 104px;
@@ -981,43 +967,100 @@ margin-top: 10px;
   font-weight: 400;
   line-height: 18px;
 }
+
 .sorting-of-type {
   display: flex;
 }
+
 .sorting-list {
-display: flex;
+  display: flex;
 }
+
 .sorting-list li {
   margin-left: 30px;
 }
+
 .sorting-for-number {
   flex-grow: 1;
-
 }
+
 .sorting-btn {
   display: flex;
   justify-content: flex-end;
 }
+
 .sorting-btn li {
   margin-left: 10px;
 }
+
 .sorting-list a {
-  border-bottom:1px dashed #81b3d2;
-  color: rgba(0,0,0,0.3);
+  border-bottom: 1px dashed #81b3d2;
+  color: rgba(0, 0, 0, 0.3);
 }
+
 .sorting-list .price {
-    color: #81b3d2;
-    border: 0;
+  color: #81b3d2;
+  border: 0;
 }
- .more svg {
-    color: #81b3d2;
-}
+
 .for-type:hover,
 .for-rating:hover {
   color: #81b3d2;
 }
+
 .for-type:focus,
 .for-rating:focus {
   border: 0;
-  color: #000000; 
+  color: #000000;
+}
+
+.sorting-btn-link:hover svg {
+  fill: #231f20;
+}
+
+.sorting-btn-link:active svg {
+  fill: #81b3d2;
+}
+
+.sorting-btn-link .active svg {
+  fill: #81b3d2;
+}
+
+.checkbox-checked {
+  display: none;
+}
+
+.infrastructure-option input:checked~.checkbox-checked {
+  display: block;
+}
+
+.infrastructure-option input:checked~.checkbox-empty {
+  display: none;
+}
+
+.infrastructure-option label {
+  position: relative;
+  padding: 1px 0 1px 40px;
+  display: block;
+}
+
+.housing-option label {
+  position: relative;
+  padding: 1px 0 1px 40px;
+  display: block;
+}
+
+.checkbox-checked,
+.checkbox-empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.housing-option input:checked~.checkbox-checked {
+  display: block;
+}
+
+.housing-option input:checked~.checkbox-empty {
+  display: none;
 }
