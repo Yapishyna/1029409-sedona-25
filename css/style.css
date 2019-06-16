@@ -260,6 +260,7 @@ a {
 
 .date-field {
   margin: 0 0 30px;
+  display: flex;
 }
 
 .arrival-calendar {
@@ -336,7 +337,7 @@ a {
 
 .form-text-old {
   width: 112px;
-  margin-right: 25px;
+  margin-right: 15px;
 }
 
 .text-old-children {
@@ -1064,3 +1065,4 @@ body {
 .housing-option input:checked~.checkbox-empty {
   display: none;
 }
+.
