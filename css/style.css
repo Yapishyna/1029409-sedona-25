@@ -53,7 +53,9 @@ svg {
   padding: 15px 72px;
   font-weight: 700;
 }
-
+.site-navigation li {
+  vertical-align: middle;
+}
 .site-navigation li:first-child {
   text-align: left;
   width: 240px;
@@ -585,10 +587,12 @@ svg {
   box-sizing: border-box;
   margin-right: 3px;
   margin-left: 4px;
+  color: #ffffff;
 }
 
-.social-btn-svg {
-  fill: #ffffff;
+.social-button:active {
+  background-color: #5496bd;
+  color: #88b6d1;
 }
 
 .social-button:hover {
@@ -599,11 +603,6 @@ svg {
 .social-button:focus {
   background-color: #5496bd;
   color: rgba(136, 182, 209, 0.3);
-}
-
-.social-button:active {
-  background-color: #5496bd;
-  color: #88b6d1;
 }
 
 .footer-copyright {
@@ -703,20 +702,19 @@ svg {
   display: block;
 }
 
-.infrastructure-option input,
-.housing-option input {
-  display: none;
+.check-input {
+-webkit-appearance: none;
 }
 
 .checkbox-checked {
   display: none;
 }
 
-.infrastructure-option input:checked~.checkbox-checked {
+.check-input:checked~.checkbox-checked {
   display: block;
 }
 
-.infrastructure-option input:checked~.checkbox-empty {
+.check-input:checked~.checkbox-empty {
   display: none;
 }
 
@@ -726,15 +724,12 @@ svg {
   top: 0;
   left: 0;
 }
-
-.housing-option input:checked~.checkbox-checked {
-  display: block;
+.check-input:focus+svg {
+  outline: red ;
 }
-
-.housing-option input:checked~.checkbox-empty {
-  display: none;
+.check-input:disabled svg {
+  fill: red;
 }
-
 .filter-range {
   width: 330px;
   color: #ffffff;
@@ -943,6 +938,18 @@ svg {
   margin-left: 10px;
 }
 
+.sorting-btn-link {
+  color: #cacaca;
+}
+
+.sorting-btn-link:hover {
+  color: #231f20;
+}
+
+.sorting-btn-link:focus {
+  color: #81b3d2;
+}
+
 .catalog-list {
   list-style: none;
   margin: 0;
@@ -1101,16 +1108,4 @@ svg {
   margin-top: 50px;
   background-color: #f2f2f2;
   padding-left: 3px;
-}
-
-.sorting-btn-link svg:hover {
-  fill: #231f20;
-}
-
-.sorting-btn-link:active svg {
-  fill: #81b3d2;
-}
-
-.sorting-btn-link .active svg {
-  fill: #81b3d2;
 }
