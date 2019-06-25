@@ -52,6 +52,7 @@ svg {
   margin: 0;
   padding: 15px 72px;
   font-weight: 700;
+  flex-wrap: wrap;
 }
 .site-navigation li {
   vertical-align: middle;
@@ -690,20 +691,27 @@ svg {
   margin-bottom: 22px;
 }
 
-.infrastructure-option label {
+.choice-label {
   position: relative;
   padding: 1px 0 1px 40px;
   display: block;
 }
 
-.housing-option label {
-  position: relative;
-  padding: 1px 0 1px 41px;
-  display: block;
+.check-input {
+position: absolute;
+width: 1px;
+height: 1px;
+border: 0;
+margin: -1px;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0 );
+overflow: hidden;
 }
 
-.check-input {
--webkit-appearance: none;
+.check-input:focus ~ svg {
+  box-shadow: 0 0 2px 1px rgb(224, 218, 34);
 }
 
 .checkbox-checked {
@@ -724,12 +732,12 @@ svg {
   top: 0;
   left: 0;
 }
-.check-input:focus+svg {
-  outline: red ;
+
+.check-input:checked:disabled~.checkbox-checked,
+.check-input:disabled~.checkbox-empty {
+  fill: #6a6a6a;
 }
-.check-input:disabled svg {
-  fill: red;
-}
+
 .filter-range {
   width: 330px;
   color: #ffffff;
