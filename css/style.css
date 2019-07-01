@@ -30,7 +30,7 @@ a {
 }
 
 svg {
-	fill: currentcolor;
+	fill: currentColor;
 }
 
 .main-menu {
@@ -336,6 +336,24 @@ svg {
 	margin-left: -284px;
 	position: absolute;
 	z-index: 150;
+	display: block;
+	animation-name: stretching;
+	animation-duration: 1s;
+	animation-direction: reverse;
+}
+
+@keyframes stretching {
+
+	0% {
+	  transform: translatey(0px);
+	}
+	100% {
+	transform: translatey(-400px);
+	}
+}
+
+.visual {
+	display: none;
 }
 
 .hotel-search {
@@ -439,16 +457,23 @@ svg {
 	border: 0;
 	padding: 0;
 	background-color: transparent;
-	fill: #cccccc;
 }
 
-.view-calendar:hover {
-	fill: #000000;
+.calendar-svg {
+	color: #cacaca;
 }
 
-.view-calendar:focus {
+.calendar-svg:hover {
+	color: #000000;
+}
+
+.calendar-svg:focus {
 	outline: none;
-	fill: #98c1da;
+	color: #98c1da;
+}
+
+.calendar-svg:active {
+	color: #81b3d2;
 }
 
 .old-item {
